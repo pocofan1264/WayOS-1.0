@@ -8,3 +8,4 @@ Features:
 - ¿How to run?
 - '''bash
 - python wayos_v1.0.py
+- ![WayOS Logo](logo.png)
