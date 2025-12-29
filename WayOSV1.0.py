@@ -5,6 +5,7 @@ from tkinter import ttk, messagebox, filedialog, scrolledtext
 import time
 import random
 import os
+import pygame.mixer as mxr
 import datetime
 
 # Colors for style
@@ -427,6 +428,17 @@ class WayOSApp:
             return True
         return False
 
+
+    def play_mp3(self, music):
+        self.mxr.init()
+        self.mxr.music.load(music)
+        running = True
+        while running:
+            for event in pygame.event.get():
+                if event.type == pygame.QUIT:
+                    running = False
+        
+        
     # Memory Match
     def start_memory(self):
         memory_win = tk.Toplevel(self.root)
